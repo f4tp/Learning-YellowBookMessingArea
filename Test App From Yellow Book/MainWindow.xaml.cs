@@ -24,5 +24,15 @@ namespace Test_App_From_Yellow_Book
         {
             InitializeComponent();
         }
+
+        private void onClick(object sender, RoutedEventArgs e)
+        {
+            string largerNumberMessage = TestIfStatement.GetIfResult(txtBoxFirst.Text, txtBoxSecond.Text);
+            if (largerNumberMessage == "error")
+                MessageBox.Show("The data entered is not numerical");
+            else
+                MessageBox.Show(largerNumberMessage);
+
+        }
     }
 }
