@@ -28,17 +28,21 @@ namespace Test_App_From_Yellow_Book
         private void onClick(object sender, RoutedEventArgs e)
         {
             /* IF
-            string largerNumberMessage = TestIfStatement.GetIfResult(txtBoxFirst.Text, txtBoxSecond.Text);
-            if (largerNumberMessage == "error")
-                MessageBox.Show("The data entered is not numerical");
+                string largerNumberMessage = TestIfStatement.GetIfResult(txtBoxFirst.Text, txtBoxSecond.Text);
+                if (largerNumberMessage == "error")
+                    MessageBox.Show("The data entered is not numerical");
 
-            else
-                MessageBox.Show(largerNumberMessage);
+                else
+                    MessageBox.Show(largerNumberMessage);
+             */
+
+            /* LOOPS
+               LoopsTest.TestDoWhileLoop(txtBoxFirst.Text);
+               LoopsTest.TestForLoop(txtBoxSecond.Text);
+               LoopsTest.TestIteratorForEach();
             */
 
-            LoopsTest.TestDoWhileLoop(txtBoxFirst.Text);
-
-            LoopsTest.TestIteratorForEach();
+            StringFormatting.OutputFormatting();
         }
     }
 }
