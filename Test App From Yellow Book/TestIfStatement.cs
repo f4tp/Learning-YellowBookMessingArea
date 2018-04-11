@@ -25,12 +25,13 @@ namespace Test_App_From_Yellow_Book
                 else
                     return "number2 is greater";
             }
-            catch
+
+            catch (Exception e)
             {
+                Console.WriteLine(e.Message.ToString());
                 return "error";
             }
-            
-            
+
         }
         
     }

@@ -27,7 +27,7 @@ namespace Test_App_From_Yellow_Book
 
         private void onClick(object sender, RoutedEventArgs e)
         {
-            /* IF
+            /*IF and Exception
                 string largerNumberMessage = TestIfStatement.GetIfResult(txtBoxFirst.Text, txtBoxSecond.Text);
                 if (largerNumberMessage == "error")
                     MessageBox.Show("The data entered is not numerical");
@@ -36,13 +36,32 @@ namespace Test_App_From_Yellow_Book
                     MessageBox.Show(largerNumberMessage);
              */
 
+
             /* LOOPS
                LoopsTest.TestDoWhileLoop(txtBoxFirst.Text);
                LoopsTest.TestForLoop(txtBoxSecond.Text);
                LoopsTest.TestIteratorForEach();
             */
 
+            /* STRING FORMATTING
             StringFormatting.OutputFormatting();
+            */
+
+            /* REF
+            int valueSentFromMain = 20;
+            MessageBox.Show($"the value of valueSentFromMain is {valueSentFromMain}");
+            TestReferenceParams.testRefValue(ref valueSentFromMain);
+            MessageBox.Show($"value from main method call, t valueSentFromMain is now {valueSentFromMain}");
+            */
+
+            /* OUT
+            string name;
+            TestOutParams.RunTestOutParams(out name);
+            MessageBox.Show(name);
+            */
+
+            ReaderWriterExample.TestReader();
+
         }
     }
 }

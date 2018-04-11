@@ -55,8 +55,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="LoopsTest.cs" />
+    <Compile Include="ReaderWriterExample.cs" />
     <Compile Include="StringFormatting.cs" />
     <Compile Include="TestIfStatement.cs" />
+    <Compile Include="TestOutParams.cs" />
+    <Compile Include="TestReferenceParams.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
