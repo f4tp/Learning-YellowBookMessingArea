@@ -60,7 +60,12 @@ namespace Test_App_From_Yellow_Book
             MessageBox.Show(name);
             */
 
+            /* READER
             ReaderWriterExample.TestReader();
+            */
+
+            EnumTest.SetSeaEmptySea();
+            EnumTest.SetSeaStateCruiser();
 
         }
     }

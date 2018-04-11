@@ -54,9 +54,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EnumTest.cs" />
     <Compile Include="LoopsTest.cs" />
     <Compile Include="ReaderWriterExample.cs" />
     <Compile Include="StringFormatting.cs" />
+    <Compile Include="StructAccount.cs" />
     <Compile Include="TestIfStatement.cs" />
     <Compile Include="TestOutParams.cs" />
     <Compile Include="TestReferenceParams.cs" />
