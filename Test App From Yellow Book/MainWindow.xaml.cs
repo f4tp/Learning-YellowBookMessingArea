@@ -63,10 +63,18 @@ namespace Test_App_From_Yellow_Book
             /* READER
             ReaderWriterExample.TestReader();
             */
-
+            /*ENUMS
             EnumTest.SetSeaEmptySea();
             EnumTest.SetSeaStateCruiser();
-
+            */
+            /* STRUCT and DICTIONARY
+            StructAccount RobsAccount = new StructAccount("Rob Whitworth", "address", 000000001, 5000, 500);
+            StructAccount DansAccount = new StructAccount("Dan Whitworth", "address", 000000002, 6000, 500);
+            StructAccount PetersAccount = new StructAccount("Peter Whitworth", "address", 000000003, 7000, 500);
+            StructAccount SandrasAccount = new StructAccount("Sandra Whitworth", "address", 000000004, 8000, 500);
+            StructAccount JimmysAccount = new StructAccount("Jimmy Whitworth", "address", 000000005, 9000, 500);
+            StructAccount.OutputAllAccountsAsString();
+            */
         }
     }
 }
