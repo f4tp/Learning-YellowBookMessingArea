@@ -59,6 +59,7 @@
     <Compile Include="ReaderWriterExample.cs" />
     <Compile Include="StringFormatting.cs" />
     <Compile Include="StructAccount.cs" />
+    <Compile Include="structExamp.cs" />
     <Compile Include="TestIfStatement.cs" />
     <Compile Include="TestOutParams.cs" />
     <Compile Include="TestReferenceParams.cs" />

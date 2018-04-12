@@ -75,6 +75,12 @@ namespace Test_App_From_Yellow_Book
             StructAccount JimmysAccount = new StructAccount("Jimmy Whitworth", "address", 000000005, 9000, 500);
             StructAccount.OutputAllAccountsAsString();
             */
+
+            /* My STRUCT FILE CALL
+            structExample tester = new structExample(5, 3);
+            MessageBox.Show(tester.GetIntOne().ToString());
+            MessageBox.Show(tester.GetIntTwo().ToString());
+            */
         }
     }
 }
