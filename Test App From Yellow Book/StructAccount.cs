@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace Test_App_From_Yellow_Book
 {
-    class StructAccount
+    class StructAccount : IAccount
     {
         public struct Account {public string Name; public string Address; public int AccountNumber; public int Balance; public int Overdraft;};
         public static Dictionary<int, Account> accountHolderDict = new Dictionary<int, Account>();
@@ -40,8 +40,20 @@ namespace Test_App_From_Yellow_Book
             return accountHolderDict[accountnumin];
         }
 
+        public void PayInFunds(decimal amount)
+        {
+            throw new NotImplementedException();
+        }
 
+        public bool CanWithdrawFunds(decimal amount)
+        {
+            throw new NotImplementedException();
+        }
 
+        public decimal GetBalance()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 

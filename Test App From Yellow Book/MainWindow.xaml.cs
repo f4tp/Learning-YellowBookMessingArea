@@ -48,38 +48,46 @@ namespace Test_App_From_Yellow_Book
             */
 
             /* REF
-            int valueSentFromMain = 20;
-            MessageBox.Show($"the value of valueSentFromMain is {valueSentFromMain}");
-            TestReferenceParams.testRefValue(ref valueSentFromMain);
-            MessageBox.Show($"value from main method call, t valueSentFromMain is now {valueSentFromMain}");
+                int valueSentFromMain = 20;
+                MessageBox.Show($"the value of valueSentFromMain is {valueSentFromMain}");
+                TestReferenceParams.testRefValue(ref valueSentFromMain);
+                MessageBox.Show($"value from main method call, t valueSentFromMain is now {valueSentFromMain}");
             */
 
             /* OUT
-            string name;
-            TestOutParams.RunTestOutParams(out name);
-            MessageBox.Show(name);
+                string name;
+                TestOutParams.RunTestOutParams(out name);
+                MessageBox.Show(name);
             */
 
             /* READER
-            ReaderWriterExample.TestReader();
+                ReaderWriterExample.TestReader();
             */
             /*ENUMS
-            EnumTest.SetSeaEmptySea();
-            EnumTest.SetSeaStateCruiser();
+                EnumTest.SetSeaEmptySea();
+                EnumTest.SetSeaStateCruiser();
             */
             /* STRUCT and DICTIONARY
-            StructAccount RobsAccount = new StructAccount("Rob Whitworth", "address", 000000001, 5000, 500);
-            StructAccount DansAccount = new StructAccount("Dan Whitworth", "address", 000000002, 6000, 500);
-            StructAccount PetersAccount = new StructAccount("Peter Whitworth", "address", 000000003, 7000, 500);
-            StructAccount SandrasAccount = new StructAccount("Sandra Whitworth", "address", 000000004, 8000, 500);
-            StructAccount JimmysAccount = new StructAccount("Jimmy Whitworth", "address", 000000005, 9000, 500);
-            StructAccount.OutputAllAccountsAsString();
+                StructAccount RobsAccount = new StructAccount("Rob Whitworth", "address", 000000001, 5000, 500);
+                StructAccount DansAccount = new StructAccount("Dan Whitworth", "address", 000000002, 6000, 500);
+                StructAccount PetersAccount = new StructAccount("Peter Whitworth", "address", 000000003, 7000, 500);
+                StructAccount SandrasAccount = new StructAccount("Sandra Whitworth", "address", 000000004, 8000, 500);
+                StructAccount JimmysAccount = new StructAccount("Jimmy Whitworth", "address", 000000005, 9000, 500);
+                StructAccount.OutputAllAccountsAsString();
             */
 
             /* My STRUCT FILE CALL
-            structExample tester = new structExample(5, 3);
-            MessageBox.Show(tester.GetIntOne().ToString());
-            MessageBox.Show(tester.GetIntTwo().ToString());
+                structExample tester = new structExample(5, 3);
+                MessageBox.Show(tester.GetIntOne().ToString());
+                MessageBox.Show(tester.GetIntTwo().ToString());
+            */
+
+            /*My STRUCT FILE CALL WITHOUT CREATING IT LIKE AN OBJECT
+            structExampleNoInst testNoInst;
+            testNoInst.IntOneTester = 50;
+            testNoInst.IntTwoTester = 30;
+            MessageBox.Show(testNoInst.IntOneTester.ToString());
+            MessageBox.Show(testNoInst.IntTwoTester.ToString());
             */
         }
     }
