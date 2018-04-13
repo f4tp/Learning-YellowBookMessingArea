@@ -54,8 +54,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Bank System Files\AbstAccountFields.cs" />
+    <Compile Include="Bank System Files\BabyAccount.cs" />
+    <Compile Include="Bank System Files\CustomerAccount.cs" />
+    <Compile Include="Bank System Files\AbstDictionaryBank.cs" />
+    <Compile Include="Bank System Files\HashBank.cs" />
+    <Compile Include="Bank System Files\IBank.cs" />
     <Compile Include="EnumTest.cs" />
-    <Compile Include="IAccount.cs" />
+    <Compile Include="Bank System Files\AbstFee.cs" />
+    <Compile Include="Bank System Files\IAccount.cs" />
     <Compile Include="LoopsTest.cs" />
     <Compile Include="ReaderWriterExample.cs" />
     <Compile Include="StringFormatting.cs" />

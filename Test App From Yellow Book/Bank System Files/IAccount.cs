@@ -11,5 +11,13 @@ namespace Test_App_From_Yellow_Book
         void PayInFunds(decimal amount);
         bool CanWithdrawFunds(decimal amount);
         decimal GetBalance();
+        string GetName();
+        int GetAccountNum();
+    
+        /*string Tester
+        {
+            get;
+            set;
+        }*/
     }
 }

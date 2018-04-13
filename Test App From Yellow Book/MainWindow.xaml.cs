@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Test_App_From_Yellow_Book.Bank_System_Files;
 
 namespace Test_App_From_Yellow_Book
 {
@@ -74,6 +76,8 @@ namespace Test_App_From_Yellow_Book
                 StructAccount SandrasAccount = new StructAccount("Sandra Whitworth", "address", 000000004, 8000, 500);
                 StructAccount JimmysAccount = new StructAccount("Jimmy Whitworth", "address", 000000005, 9000, 500);
                 StructAccount.OutputAllAccountsAsString();
+
+            StructAccount.TestDictAccessWithValue(000000001);
             */
 
             /* My STRUCT FILE CALL
@@ -89,6 +93,28 @@ namespace Test_App_From_Yellow_Book
             MessageBox.Show(testNoInst.IntOneTester.ToString());
             MessageBox.Show(testNoInst.IntTwoTester.ToString());
             */
+
+
+            /* DELEGATES
+            CalculateFee ripFee = new CalculateFee(Fee.RipOffFee);
+            decimal ripFeeInt = ripFee(-1);
+            MessageBox.Show(ripFeeInt.ToString());
+            CalculateFee friendFee = new CalculateFee(Fee.FriendlyFee);
+            decimal friendFeeInt = friendFee(-1);
+            MessageBox.Show(friendFeeInt.ToString());
+            */
+
+            /* ARRAY LIST Vs LIST
+            ArrayList multipleDataTypeArrayList = new ArrayList(); //can contain multiple data types, is not  a generic collection
+            List<string> specificList = new List<string>(); //just contains strings, is a generic collection
+            */
+
+            IAccount custRob = new CustomerAccount("Rob Whitworth", "address", 1000);
+            IAccount custPeter = new CustomerAccount("Peter Whitworth", "address", 2000);
+            IAccount babySandra = new BabyAccount("Sandra Whitworth", "address", 3000);
+            IAccount babyLaura = new BabyAccount("Laura Whitworth", "address", 4000);
+
+
         }
     }
 }

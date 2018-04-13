@@ -7,11 +7,15 @@ using System.Windows;
 
 namespace Test_App_From_Yellow_Book
 {
-    class StructAccount : IAccount
+    class StructAccount
+
     {
         public struct Account {public string Name; public string Address; public int AccountNumber; public int Balance; public int Overdraft;};
         public static Dictionary<int, Account> accountHolderDict = new Dictionary<int, Account>();
         public static List<int> allAccountNumbers = new List<int>();
+
+        public string Tester { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public StructAccount(string name, string address, int accountnum, int balance, int overdraft)
         
         {
@@ -36,23 +40,21 @@ namespace Test_App_From_Yellow_Book
         }
 
         public static object GetAccountWithNumber(int accountnumin)
-        {     
+        {
             return accountHolderDict[accountnumin];
         }
 
-        public void PayInFunds(decimal amount)
+        public static void TestDictAccessWithValue(int accountnumin)
         {
-            throw new NotImplementedException();
-        }
+            if (accountHolderDict.ContainsKey(accountnumin))
+            {
 
-        public bool CanWithdrawFunds(decimal amount)
-        {
-            throw new NotImplementedException();
-        }
-
-        public decimal GetBalance()
-        {
-            throw new NotImplementedException();
+                MessageBox.Show(accountHolderDict[accountnumin].ToString());
+            }
+            else
+            {
+                MessageBox.Show("The account was not found");
+            }
         }
     }
 
