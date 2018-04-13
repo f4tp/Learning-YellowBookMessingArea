@@ -17,9 +17,67 @@ namespace Test_App_From_Yellow_Book.Bank_System_Files
             Overdraft = BABY_ACCOUNT_OVERDRAFT;
             AccountNumber = AbstAccountFields.GetNewAccountNumber();
             AbstDictionaryBank.StoreNewAccount(this);
-            SaveAccountToDisk(this.Name, this.Address, this.AccountNumber.ToString(), this.Balance.ToString());
+            AbstFileHandling.SaveAccountToDisk(this);
         }
 
+        
+
+        public bool CanWithdrawFunds(decimal amount)
+        {
+            if (amount > 10)
+            {
+                return false;
+            }
+            if (Balance < amount)
+            {
+                return false;
+            }
+            else
+            {
+                Balance = Balance - amount;
+                return true;
+            }
+        }
+
+        public int GetAccountNum()
+        {
+            return AccountNumber;
+        }
+
+        public decimal GetBalance()
+        {
+            return Balance;
+        }
+
+        public string GetName()
+        {
+            return Name;
+        }
+
+        public void PayInFunds(decimal amount)
+        {
+            Balance += amount;
+        }
+
+        public string GetAddress()
+        {
+            return Address;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //DELETE WHEN DONT NEED
+        /*
         //these two methods should be elsewhere - in a better placed class, for better cohesiveness / Single responsibility principle
         private bool SaveAccountToDisk(string namein, string addressin, string accountnumin, string balancein)
         {
@@ -53,7 +111,7 @@ namespace Test_App_From_Yellow_Book.Bank_System_Files
                 int accountNum = int.Parse(accountText);
                 decimal balance = decimal.Parse(balanceText);
                 //result = new BabyAccount(nameText, addressText, balance);
-                result = (BabyAccount) AbstDictionaryBank.FindAccountWithAccountNum(accountNum);
+                result = (BabyAccount)AbstDictionaryBank.FindAccountWithAccountNum(accountNum);
 
             }
             catch
@@ -69,42 +127,6 @@ namespace Test_App_From_Yellow_Book.Bank_System_Files
             }
             return result;
         }
-
-        public bool CanWithdrawFunds(decimal amount)
-        {
-            if (amount > 10)
-            {
-                return false;
-            }
-            if (Balance < amount)
-            {
-                return false;
-            }
-            else
-            {
-                Balance = Balance - amount;
-                return true;
-            }
-        }
-
-        public int GetAccountNum()
-        {
-            return AccountNumber;
-        }
-
-        public decimal GetBalance()
-        {
-            return Balance;
-        }
-
-        public string GetName()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void PayInFunds(decimal amount)
-        {
-            Balance += amount;
-        }
+        */
     }
 }

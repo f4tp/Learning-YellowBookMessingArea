@@ -55,6 +55,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bank System Files\AbstAccountFields.cs" />
+    <Compile Include="Bank System Files\AbstFileHandling.cs" />
     <Compile Include="Bank System Files\BabyAccount.cs" />
     <Compile Include="Bank System Files\CustomerAccount.cs" />
     <Compile Include="Bank System Files\AbstDictionaryBank.cs" />

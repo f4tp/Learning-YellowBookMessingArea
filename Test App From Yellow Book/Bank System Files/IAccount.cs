@@ -13,6 +13,8 @@ namespace Test_App_From_Yellow_Book
         decimal GetBalance();
         string GetName();
         int GetAccountNum();
+        string GetAddress();
+   
     
         /*string Tester
         {

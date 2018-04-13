@@ -114,6 +114,9 @@ namespace Test_App_From_Yellow_Book
             IAccount babySandra = new BabyAccount("Sandra Whitworth", "address", 3000);
             IAccount babyLaura = new BabyAccount("Laura Whitworth", "address", 4000);
 
+            IAccount foundAccount = AbstFileHandling.LoadAccountDetails(100000000);
+            MessageBox.Show(foundAccount.GetName());
+
 
         }
     }
