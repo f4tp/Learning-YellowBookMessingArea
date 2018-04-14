@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Test_App_From_Yellow_Book.Bank_System_Files;
+using Test_App_From_Yellow_Book.Thread_Work;
 
 namespace Test_App_From_Yellow_Book
 {
@@ -95,27 +98,66 @@ namespace Test_App_From_Yellow_Book
             */
 
 
-            /* DELEGATES
-            CalculateFee ripFee = new CalculateFee(Fee.RipOffFee);
-            decimal ripFeeInt = ripFee(-1);
-            MessageBox.Show(ripFeeInt.ToString());
-            CalculateFee friendFee = new CalculateFee(Fee.FriendlyFee);
-            decimal friendFeeInt = friendFee(-1);
-            MessageBox.Show(friendFeeInt.ToString());
+            /*DELEGATES
+                CalculateFee ripFee = new CalculateFee(Fee.RipOffFee);
+                decimal ripFeeInt = ripFee(-1);
+                MessageBox.Show(ripFeeInt.ToString());
+                CalculateFee friendFee = new CalculateFee(Fee.FriendlyFee);
+                decimal friendFeeInt = friendFee(-1);
+                MessageBox.Show(friendFeeInt.ToString());
             */
 
             /* ARRAY LIST Vs LIST
-            ArrayList multipleDataTypeArrayList = new ArrayList(); //can contain multiple data types, is not  a generic collection
-            List<string> specificList = new List<string>(); //just contains strings, is a generic collection
+                ArrayList multipleDataTypeArrayList = new ArrayList(); //can contain multiple data types, is not  a generic collection
+                List<string> specificList = new List<string>(); //just contains strings, is a generic collection
             */
 
-            IAccount custRob = new CustomerAccount("Rob Whitworth", "address", 1000);
-            IAccount custPeter = new CustomerAccount("Peter Whitworth", "address", 2000);
-            IAccount babySandra = new BabyAccount("Sandra Whitworth", "address", 3000);
-            IAccount babyLaura = new BabyAccount("Laura Whitworth", "address", 4000);
+            /* BANK WORK
+                IAccount custRob = new CustomerAccount("Rob Whitworth", "address", 1000);
+                IAccount custPeter = new CustomerAccount("Peter Whitworth", "address", 2000);
+                IAccount babySandra = new BabyAccount("Sandra Whitworth", "address", 3000, "Rob Whitworth");
+                IAccount babyLaura = new BabyAccount("Laura Whitworth", "address", 4000, "Peter Whitworth");
 
-            IAccount foundAccount = AbstFileHandling.LoadAccountDetails(100000000);
-            MessageBox.Show(foundAccount.GetName());
+                IAccount foundAccount = AbstFileHandling.LoadAccountDetails(100000000);
+                MessageBox.Show(foundAccount.GetName());
+            */
+
+            /* THREADS WORK
+                ThreadStart busyLoopMethod = new ThreadStart(ThreadExample.BusyLoop);
+                ThreadStart busyLoopMethodTwo = new ThreadStart(ThreadExample.BusyLoopTwo);
+                Thread t1 = new Thread(busyLoopMethod);
+                Thread t2 = new Thread(busyLoopMethodTwo);
+                t1.Start();
+                t2.Start();
+            */
+
+            /* MUTUAL EXCLUSION WORK SYNC MONITOR.ENTER MONITOR.EXIT
+
+                 ThreadStart mutExMethod = new ThreadStart(ThreadWorkMutulExSync.BusyLoopMutEx);
+
+                 for (int i = 0; i < 50; i +=1)
+                 {
+                     Thread t1 = new Thread(ThreadWorkMutulExSync.BusyLoopMutEx);
+                     t1.Start();
+                 }
+
+
+                 //ThreadStart noMutExMethod = new ThreadStart(ThreadWorkMutulExSync.BusyLoopNoMutEx);
+
+                // for (int i = 0; i < 50; i += 1)
+                // {
+                    // Thread t1 = new Thread(ThreadWorkMutulExSync.BusyLoopNoMutEx);
+                    // t1.Start();
+                 //}
+             */
+            /* PROCESS EXAMPLE
+                Process.Start("Notepad.exe");
+                //you can create processes like threads, but each process 'object' has its own memory allocation
+                //and not a shared allocation memopry block like threads use
+            */
+
+
+
 
 
         }

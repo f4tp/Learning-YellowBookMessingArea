@@ -62,8 +62,9 @@
     <Compile Include="Bank System Files\HashBank.cs" />
     <Compile Include="Bank System Files\IBank.cs" />
     <Compile Include="EnumTest.cs" />
-    <Compile Include="Bank System Files\AbstFee.cs" />
+    <Compile Include="Bank System Files\AbstFeeDelegate.cs" />
     <Compile Include="Bank System Files\IAccount.cs" />
+    <Compile Include="Exceptions\BankException.cs" />
     <Compile Include="LoopsTest.cs" />
     <Compile Include="ReaderWriterExample.cs" />
     <Compile Include="StringFormatting.cs" />
@@ -73,6 +74,8 @@
     <Compile Include="TestIfStatement.cs" />
     <Compile Include="TestOutParams.cs" />
     <Compile Include="TestReferenceParams.cs" />
+    <Compile Include="Thread Work\ThreadExample.cs" />
+    <Compile Include="Thread Work\ThreadWorkMutulExSync.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
